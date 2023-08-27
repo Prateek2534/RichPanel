@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RichPanel || Payment</title>
+    <link rel="stylesheet" href="css/payments.css">
+</head>
+<body>
+    <div class="outerDiv">
+        <div class="innerDiv">
+            <div class="leftSection">
+                <div class="paymentHead">Complete Payment</div>
+                <div class="paymentTail">Enter your Credit or Debit Card details Below</div>
+                <div class="cardDetails">
+                    <input type="text" class="cardNum">
+                    <input type="text" class="expMo">
+                    <input type="text" class="expYr">
+                    <input type="text" class="cvc">
+                </div>
+                <div class="confirmPayment">
+                    <div class="confirmBtn" id="confirmBtn">Confirm Payment</div>
+                </div>
+            </div>
+            <div class="rightSection">
+                <div class="rightHead">
+                    Order Summary
+                </div>
+                <div class="planDetails">
+                    <div class="r1">
+                        <div class="planKey">Plan Name</div>
+                        <div class="planVal">Basic</div>
+                    </div>
+                    <div class="r2">
+                        <div class="planKey">Billing Cycle</div>
+                        <div class="planVal">Monthly</div>
+                    </div>
+                    <div class="r3">
+                        <div class="planKey">Plan Price</div>
+                        <div class="planVal">Rs 200/mo</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById("confirmBtn").addEventListener("click", ()=>{
+        window.location.href = "/dashboard"
+    })
+</script>
+</html>

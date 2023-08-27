@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RichPanel || SignUp</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="outerDiv">
+        <div class="innerDiv">
+            <div class="signUpForm active box" id="signupBox">
+                <div class="formHeader">
+                    <div class="formTitle">Create Account</div>
+                </div>
+                <div class="formInputs">
+                    <div class="formName formData">
+                        <label for="name" class="nameLabel">Name</label><br>
+                        <input type="text" class="nameInput" id="name" placeholder="Manoj Kumar">
+                    </div>
+                    <div class="formEmail formData">
+                        <label for="email" class="emailLabel">Email</label><br>
+                        <input type="email" class="emailInput" id="email" placeholder="manoj@richpanel.com">
+                    </div>
+                    <div class="formPassword formData">
+                        <label for="password" class="nameLabel">Password</label><br>
+                        <input type="password" class="passwordInput" id="password">
+                    </div>
+                    <div class="formCheckBox formData">
+                        <input type="checkbox" id="rememberMe" name="rememberMe" value="rememberMe">
+                        <label for="rememberMe"> Remember Me</label>
+                    </div>
+                </div>
+                <div class="signUpBox">
+                    <div class="signUpBtn" id="signUpBtn">
+                        Sign Up
+                    </div>
+                </div>
+                <div class="formFooter">
+                    Already have an account? <span class="blueText" id="loginSlide">Login</span>
+                </div>
+            </div>
+            <div class="signInForm box" id="loginBox">
+                <div class="formHeader">
+                    <div class="formTitle">Login to your Account</div>
+                </div>
+                <div class="formInputs">
+                    <div class="formEmail formData">
+                        <label for="loginEmail" class="emailLabel">Email</label>
+                        <input type="email" class="emailInput" id="loginEmail" placeholder="manoj@richpanel.com">
+                    </div>
+                    <div class="formPassword formData">
+                        <label for="loginPassword" class="nameLabel">Password</label>
+                        <input type="password" class="passwordInput" id="loginPassword">
+                    </div>
+                    <div class="formCheckBox formData">
+                        <input type="checkbox" id="rememberMe" name="rememberMe" value="rememberMe">
+                        <label for="rememberMe"> Remember Me</label>
+                    </div>
+                </div>
+                <div class="signUpBox">
+                    <div class="signInBtn" id="signInBtn">
+                        Login
+                    </div>
+                </div>
+                <div class="formFooter">
+                    New to RichPanel? <span class="blueText" id="signUpSlide">Sign Up</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/axios.min.js"></script>
+<script src="js/login.js"></script>
+</html>

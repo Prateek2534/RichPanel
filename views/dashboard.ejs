@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RichPanel || Dashboard</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+    <div class="outerDiv">
+        <div class="innerDiv">
+            <div class="dashHead">
+                <div class="dashTitle">
+                    <div class="titleBox">Current Plan Details</div>
+                    <div class="statusBox active">Active</div>
+                </div>
+                <div class="cancelBox">
+                    Cancel
+                </div>
+            </div>
+            <div class="dashMain">
+                <div class="planName">
+                    <div class="planText">Basic</div>
+                </div>
+                <div class="planAmount">
+                    <span class="bold">₹ 2,000</span>/yr
+                </div>
+                <div class="changePlanBox">
+                    <div class="changePlanBtn" id="changePlanBtn">
+                        Change Plan
+                    </div>
+                </div>
+            </div>
+            <div class="dashFoot">
+                <div class="footMsg">
+                    Your subscription has started on <span class="bold">Jul 11th, 2022</span> and will auto renew on <span class="bold">Jul 12th 2023</span>.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const changePlanBtn = document.getElementById("changePlanBtn");
+    changePlanBtn.addEventListener("click", ()=>{
+        window.location="/";
+    })
+</script>
+</html>

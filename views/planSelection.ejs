@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RichPanel || Plan Selection</title>
+    <link rel="stylesheet" href="css/planSelection.css" />
+  </head>
+  <body>
+    <div class="outerDiv">
+      <div class="innerDiv">
+        <div class="divHeading">
+          <div class="headingText">Choose the Right Plan for You</div>
+          <div class="priceToggle">
+            <div class="switch-wrapper">
+              <input id="monthly" type="radio" name="switch" checked />
+              <input id="yearly" type="radio" name="switch" />
+              <label for="monthly">Monthly</label>
+              <label for="yearly">Yearly</label>
+              <span class="highlighter"></span>
+            </div>
+          </div>
+        </div>
+        <div class="planSelection">
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    <div>
+                      Select your plan
+                      <div class="svg-wrapper">
+                        <svg viewBox="0 0 24 24">
+                          <path
+                            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 17v-4h-8v-2h8v-4l6 5-6 5z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="heading" onclick="activate(this)">Mobile</div>
+                  </th>
+                  <th>
+                    <div class="heading" onclick="activate(this)">Basic</div>
+                  </th>
+                  <th>
+                    <div class="heading" onclick="activate(this)">Standard</div>
+                  </th>
+                  <th>
+                    <div class="heading active" onclick="activate(this)">
+                      Premium
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="priceCat">
+                    <div class="price monthly">
+                      <div class="amount">Monthly Price</div>
+                    </div>
+                    <div class="price yearly hide">
+                      <div class="amount">Yearly Price</div>
+                    </div>
+                  </td>
+                  <% for(var i=0;i<plans.length;i++){ %>
+                    <td>
+                      <div class="price monthly">
+                        <div class="amount">
+                          <%=plans[i].mPrice %>
+                        </div>
+                      </div>
+                      <div class="price yearly hide">
+                        <div class="amount"><%=plans[i].yPrice %></div>
+                      </div>
+                    </td>
+                  <%}%>
+                </tr>
+                <tr>
+                  <td>Video Quality</td>
+                  <% for(var i=0;i<plans.length;i++){ %>
+                    <td>
+                      <%=plans[i].vQuality %>
+                    </td>
+                  <%}%>
+                </tr>
+                <tr>
+                  <td>Resolution</td>
+                  <% for(var i=0;i<plans.length;i++){ %>
+                    <td>
+                      <%=plans[i].res %>
+                    </td>
+                  <%}%>
+                </tr>
+                <tr>
+                  <td>No. of Devices</td>
+                  <% for(var i=0;i<plans.length;i++){ %>
+                    <td>
+                      <%=plans[i].numDevices %>
+                    </td>
+                  <%}%>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="submitSection">
+          <div class="nextBtn" id="nextBtn">Next</div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="js/planSelection.js"></script>
+  <script>
+    document.getElementById("nextBtn").addEventListener("click", ()=>{
+      window.location.href = "/payments"
+    })
+  </script>
+</html>

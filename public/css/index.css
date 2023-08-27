@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.outerDiv{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    background-color: #1f4c91;
+    justify-content: center;
+}
+
+.innerDiv{
+    position: relative;
+    display: flex;
+    background-color: white;
+    padding: 2rem 2rem;
+    border-radius: 10px;
+    width: 20rem;
+}
+
+.signUpForm{
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signInForm{
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formHeader{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formInputs{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.formTitle{
+    position: relative;
+    font-size: 1.2rem;
+}
+
+.formData
+{
+    position: relative;
+    width: 90%;
+    margin: 0.5rem 0;
+}
+
+.nameInput, .emailInput, .passwordInput{
+    outline: none;
+    border: 1px solid rgb(191, 189, 189);
+    border-radius: 5px;
+    font-size: 0.9rem;
+    width: 92%;
+    padding: 0.4rem 0.4rem;
+}
+
+.signUpBox{
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;   
+}
+
+.signUpBtn, .signInBtn{
+    position: relative;
+    display: flex;
+    width: 85%;
+    color: white;
+    font-size: 0.9rem;
+    margin: 1rem 0;
+    border-radius: 7px;
+    padding: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #1f4c91;
+    cursor: pointer;
+}
+
+.blueText{
+    color: #1f4c91;
+    cursor: pointer;
+}
+
+#loginBox.active {
+    display: flex;
+    transform: translateX(0);
+}
+  
+#signupBox.active {
+    display: flex;
+    transform: translateX(0);
+}
+
+.box{
+    display: none;
+    transition: transform 0.5s ease-in-out;
+}
